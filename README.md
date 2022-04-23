@@ -9,7 +9,7 @@ The main objective of this project is to load bikshare data from CSV files using
 
 
 ### Files used
-bikeshare_2.py
+bikeshare.py
 chicago.csv
 washington.csv
 new_york_city.csv
