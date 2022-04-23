@@ -1,17 +1,19 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
-Include the date you created this project and README file.
+This project was created in 21/4/2022. This readme file was created on saturday 23/4/2022
 
 ### Project Title
-Replace the Project Title
+Exploring Bikeshare data with python libraries
 
 ### Description
-Describe what your project is about and what it does
+The main objective of this project is to load bikshare data from CSV files using python pandas library and extract descriptive statistics from the raw data. The data comes in three different csv files for three different cities
+
 
 ### Files used
-Include the files used
+bikeshare_2.py
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+generation names by date of birth
+https://www.parents.com/parenting/better-parenting/style/generation-names-and-years-a-cheat-sheet-for-parents/
