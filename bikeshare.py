@@ -2,7 +2,7 @@ import time
 import pandas as pd
 
 CITY_DATA = {'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv', 'washington': 'washington.csv'}
-daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 monthsInYear = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all']
 
 def get_filters():
@@ -32,7 +32,7 @@ def get_filters():
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = 'xxxxxx'
-    while day.lower() not in daysOfWeek:
+    while day.lower() not in days_of_week:
         if day == 'xxxxxx':
             day = input('would you like to filter data by day (type all to apply no filters or type the day of the week(saturday,sunday,monday...etc)): ')
         else:
@@ -63,7 +63,7 @@ def load_data(city, month, day):
     # filter results by day if the user entered a day
     if day != 'all':
         df['day']=df['Start Time'].dt.dayofweek
-        dayDigit=daysOfWeek.index(day)
+        dayDigit=days_of_week.index(day)
         df = df[df['day'] == dayDigit]
 
     return df, cp_df
@@ -81,7 +81,7 @@ def time_stats(df):
 
     # display the most common day of week
     df['day'] = df['Start Time'].dt.dayofweek
-    print('Most common day is {}'.format(daysOfWeek[int(df['day'].mode()[0])]))
+    print('Most common day is {}'.format(days_of_week[int(df['day'].mode()[0])]))
 
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
@@ -239,5 +239,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
