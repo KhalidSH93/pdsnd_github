@@ -17,3 +17,5 @@ new_york_city.csv
 ### Credits
 generation names by date of birth
 https://www.parents.com/parenting/better-parenting/style/generation-names-and-years-a-cheat-sheet-for-parents/
+Millennials spending habits 
+https://influencermarketinghub.com/millennial-spending-habits/#:~:text=3.-,Millennials'%20Spending%20Power%20Is%20%242.5%20Trillion,30%25%20of%20retail%20expenditure).
