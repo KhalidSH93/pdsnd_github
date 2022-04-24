@@ -3,7 +3,7 @@ import pandas as pd
 
 CITY_DATA = {'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv', 'washington': 'washington.csv'}
 days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
-monthsInYear = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all']
+months_in_year = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all']
 
 def get_filters():
     """
@@ -24,7 +24,7 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     month = 'xxxxxx'
-    while month.lower() not in monthsInYear:
+    while month.lower() not in months_in_year:
         if month == 'xxxxxx':
             month = input('would you like to filter data by month (type all to apply no filters or type the month of the year(january, february, march...etc)): ')
         else:
@@ -58,7 +58,7 @@ def load_data(city, month, day):
     # filter results by month if the user entered a month
     if month != 'all':
         df['month']=df['Start Time'].dt.month
-        monthDigits = monthsInYear.index(month)+1
+        monthDigits = months_in_year.index(month)+1
         df = df[df['month'] == monthDigits]
     # filter results by day if the user entered a day
     if day != 'all':
@@ -77,7 +77,7 @@ def time_stats(df):
 
     # display the most common month
     df['month'] = df['Start Time'].dt.month
-    print('Most common month is {}'.format(monthsInYear[int(df['month'].mode()[0])-1]))
+    print('Most common month is {}'.format(months_in_year[int(df['month'].mode()[0])-1]))
 
     # display the most common day of week
     df['day'] = df['Start Time'].dt.dayofweek
